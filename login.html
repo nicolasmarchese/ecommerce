@@ -4,44 +4,62 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Iniciar sesión</title>
+  <title>eMercado - Iniciar sesión</title>
+  
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-
-  <style>
-    body {
-      background-color: rgb(248, 249, 250);
-    }
-  </style>
-
+  <link href="css//login.css" rel="stylesheet" href="">
+  <script src="js/login.js"></script>
+  
 </head>
 
 <body>
-
   <main class="mt-5">
-    
     <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-2"></div>
+          <div class="col-lg-6 col-md-8 login-box">
+              <div class="col-lg-12 login-key">
+                  <i class="fa fa-key" aria-hidden="true"></i>
+              </div>
+              <img src="img/ecomerce.png" width="65%">
+              <div class="col-lg-12 login-title" style="margin-bottom: 10%;">
+                  Inicio de sesión
+              </div>
+              <div >
 
-      <div class="text-center">
 
-        <h4>Inicio de sesión</h4>
+              </div>
 
-      </div>
+              <div class="col-lg-12 login-form">
+                  <div class="col-lg-12 login-form">
+                      <div style="margin-bottom: 15%;">
+                          <div class="form-group">
+                              <label class="form-control-label">Email</label>
+                              <input type="text" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                              <label class="form-control-label">Contraseña</label>
+                              <input type="password" class="form-control" id="password">
+                          </div>
+                        </div>
 
-      <div class="container">
-
-      <label>Email</label><br>
-      <input type="email" id="name" class="form-control"><br>
-      <label>Contraseña</label><br>
-      <input type="password" id="password" class="form-control"><br><br>
-
-      <button id="ingresar">Ingresar</button>
+                          <div class="col-lg-12 loginbttm">
+                              <div class="col-lg-6 login-btm login-text">
+                                  
+                              </div>
+                              <div class="text-center" style="margin-bottom: 35px;" >
+                                  <button id="ingresar" type="submit" class="btn btn-outline-primary">Ingresar</button>
+                              </div>
+                          </div>
+                      
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-2"></div>
+          </div>
       
-    </div>
-  </div>
-
-
+    
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -53,7 +71,7 @@
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
-  <script src="js/login.js"></script>
+  
 </body>
 
 </html>

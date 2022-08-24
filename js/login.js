@@ -1,22 +1,22 @@
 function iniciarSesion(){
 
-    let usuario = {}
+    let user = {}
 
-    usuario.nombre = document.getElementById('name').value; 
-    usuario.clave = document.getElementById('password').value;
+    user.nombre = document.getElementById('name').value; 
+    user.clave = document.getElementById('password').value;
 
-    if (usuario.nombre != "" && usuario.clave != "") {
-        usuario.email = usuario.nombre + '@gmail.com';
-        usuario.pass = (usuario.clave).length > 6;
-        localStorage.setItem ('item', JSON.stringify(usuario));
+    if (user.nombre != "" && user.clave != "") {
+        localStorage.setItem ('item', JSON.stringify(user));
+        localStorage.setItem ('usr', JSON.stringify(user.nombre));
         location.href = "index.html";
     }
 
     else {
-        alert ("Por favor, ingrese usuario y clave");
+        alert ("Debe completar ambos campos");
     }
 
-}
+}   
+
 
 document.addEventListener ("DOMContentLoaded", function(e){
     document.getElementById('ingresar').addEventListener ("click", function(e){
