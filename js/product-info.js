@@ -1,5 +1,5 @@
-let identif = localStorage.getItem('pID');  // Geteo el item y lo almaceno en una variable para incluirla en el json
- 
+let identif = localStorage.getItem('pID');  
+
 const descripcion = `https://japceibal.github.io/emercado-api/products/${identif}.json`;
 
 const comentarios = `https://japceibal.github.io/emercado-api/products_comments/${identif}.json`;
@@ -7,8 +7,8 @@ const comentarios = `https://japceibal.github.io/emercado-api/products_comments/
 
 let showDesc = [];
 
-function mostrar(detalles){            // Creo los titulos, div y otras etiquetas que quiera usar para darle formato al espacio donde ira la data (con id 'desc').
-                                        // Aca no hay que hacer un for
+function mostrar(detalles){            
+
     let informacion = "";       
 
         informacion+= `
@@ -72,7 +72,7 @@ function mostrar(detalles){            // Creo los titulos, div y otras etiqueta
             
         relacionados+=`
     
-        <div  onclick="remProdID(` + rel.id + `)" class="card" style="width: 18%;">
+        <div  onclick="setID(` + rel.id + `)" class="card m-lg-3" style="width: 18%;">
     
             <img  src="` + rel.image + `" class="card-img-top" alt="...">
 
@@ -134,12 +134,11 @@ function opinar(valoracion){
 
   };
 
-  function remProdID(id){
-    localStorage.removeItem('pID')
-    window.location = "product-info.html"
-    localStorage.setItem('nID', id)
-    window.location = "product-info.html"
-    localStorage.getItem('nID') 
+  function setID(id){ 
+
+    localStorage.setItem('pID', id)
+    window.location = "product-info.html"   
+
   }
 
 document.addEventListener("DOMContentLoaded", function(e){

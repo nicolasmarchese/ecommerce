@@ -15,16 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
    
-    
-    let usuario = localStorage.getItem('item');
      
-    let logeado = localStorage.getItem('usr');
-
-    document.getElementById('usuario').innerHTML = logeado;
-
-    if(usuario == null){
-        location.href = "login.html";
-    }
-   
 });
 

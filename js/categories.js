@@ -6,7 +6,7 @@ let currentSortCriteria = undefined;
 let minCount = undefined;
 let maxCount = undefined;
 
-function sortCategories(criteria, array){
+function sortCategories(criteria, array){ 
     let result = [];
     if (criteria === ORDER_ASC_BY_NAME)
     {
@@ -36,9 +36,10 @@ function sortCategories(criteria, array){
 }
 
 function setCatID(id) {
-    localStorage.setItem("catID", id);
+    localStorage.setItem("catID", id); 
     window.location = "products.html"
 }
+
 
 function showCategoriesList(){
 
@@ -88,6 +89,10 @@ function sortAndShowCategories(sortCriteria, categoriesArray){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+
+   
+
+
     getJSONData(CATEGORIES_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
             currentCategoriesArray = resultObj.data

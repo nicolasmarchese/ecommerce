@@ -44,19 +44,109 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+          <li class="nav-item dropdown">  
+            <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" id="usuario"> 
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="login.html" id="logout">Cerrar sesión</a></li>
+              <li><a class="dropdown-item" href="cart.html" id="cart">Mi carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html" id="profile">Mi Perfil</a></li>
+            </ul>
+          </li>
           <li class="nav-item">
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <main>
+
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div class="list-group">
+
+        <div class="pt-5">
+        <h3 class="">Perfil</h3>
       </div>
+
+      <br>
+      <hr>
+
+      <form  action="" class="needs-validation" novalidate>
+
+
+        <div class="row">
+
+          <div class="col mb-2">
+            <label for="validationCustom01"  class="form-label ">Primer nombre*</label>
+            <input id="name" type="text" class="form-control" placeholder="Lucas" value="" required>
+            <div class= "invalid-feedback">
+           Ingresa un nombre
+            </div>
+          </div>
+
+          <div class="col">
+            <label for="validationCustom02" class="form-label">Segundo nombre</label>
+            <input id="segundonomb"  type="text" class="form-control" placeholder="Ignacio" value="" >
+            
+          </div>
+        </div>
+
+          <div class="row">
+
+          <div class="col">
+            <label for="validationCustom02" class="form-label ">Primer apellido*</label>
+            <input  id="ape" type="text" class="form-control" placeholder="Lopez" value="" required>
+            <div class= "invalid-feedback">
+           Ingresa un apellido
+            </div>
+          </div>
+       
+
+          <div class="col mb-2">
+            <label for="validationCustom02" class="form-label">Segundo apellido</label>
+            <input id="segundoape" type="text" class="form-control" placeholder="Gomez" value="" >
+            
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            <label for="validationCustom02" class="form-label">E-mail</label>
+            <input  id="mail"  class="form-control" type="text"  value="" >  
+          </div>
+
+          <div class="col">
+            <label for="validationCustom02" class="form-label ">Teléfono de contacto*</label>
+            <input id="telefono" type="number" class="form-control" placeholder="099999999" value="" required>
+            <div class= "invalid-feedback">
+           Ingresa un teléfono de contacto
+            </div>
+          </div>
+
+        </div>
+
+        
+        <hr class="mt-4">
+       
+        <button  id="guardar" type="submit" class="btn btn-primary mt-2">Guardar cambios</button>
+
+       
+
+     
+
+      </div>
+    
     </div>
+    
+    <div id="exito"></div>
+
+  </form>
+  
+
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -70,6 +160,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  
 </body>
 
 </html>

@@ -39,3 +39,39 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+function sesionIniciada(){
+
+  let usuario = localStorage.getItem('item');
+
+  if(usuario == null){
+      location.href = "login.html";
+  }
+    
+}
+
+function mostrarUsuario(){
+  
+  let logeado = localStorage.getItem('usr');
+
+  document.getElementById('usuario').innerHTML = JSON.parse(logeado); 
+  
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+
+sesionIniciada();
+mostrarUsuario();
+
+})
+
+
+document.getElementById('logout').addEventListener('click', function(){
+
+  localStorage.removeItem('item');
+  localStorage.removeItem('usr');
+  localStorage.removeItem('catID');
+  localStorage.removeItem('pID');
+  localStorage.removeItem('datos');
+
+})
